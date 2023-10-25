@@ -19,10 +19,19 @@
       filter: brightness(0.85);
     }
 
+    .todo-list {
+      max-height: 200px;
+      overflow: auto;
+    }
+
     .todo-item {
       padding: 4px 6px;
       border: 1px solid rgb(0 0 0 / 10%);
       border-radius: 4px;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
 
       &.on-hover {
         background: rgb(0 0 0 / 10%);
