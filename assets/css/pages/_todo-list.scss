@@ -1,5 +1,5 @@
 /*********************************************
-:: ToDO-List Page
+:: ToDo-List Page
 ********************************************/
 .todolist-page {
   .title-wrap {
@@ -72,5 +72,37 @@
         }
       }
     }
+  }
+
+  .info-chip {
+    width: 450px;
+
+    /* stylelint-disable selector-class-pattern */
+    .v-chip__content {
+      width: 100%;
+
+      button {
+        max-width: 16px;
+        max-height: 16px;
+        margin-left: auto;
+        background: #fff;
+        border-radius: 100%;
+
+        &.mdi-close-circle::before {
+          font-size: 22px;
+          color: #000;
+        }
+
+        &:hover {
+          background: #000;
+
+          &.mdi-close-circle::before {
+            font-size: 22px;
+            color: #fff;
+          }
+        }
+      }
+    }
+    /* stylelint-enable selector-class-pattern */
   }
 }

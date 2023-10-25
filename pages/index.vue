@@ -106,6 +106,26 @@
           </div>
         </v-card-actions>
       </v-card>
+      <div class="w-1/2 flex justify-end mx-auto mt-15">
+        <v-chip
+          v-if="infoChip"
+          transition="slide-x-transition"
+          class="info-chip ma-2"
+          close
+          color="indigo darken-4"
+          text-color="white"
+          @click:close="infoChip = false"
+        >
+          This application uses the browser's Local Storage to store data
+        </v-chip>
+        <v-btn
+          v-if="!infoChip"
+          color="primary"
+          class="text-capitalize"
+          @click="infoChip = true"
+          >Show info</v-btn
+        >
+      </div>
     </v-main>
   </v-app>
 </template>
@@ -126,6 +146,7 @@ export default {
     return {
       highestIdValue: 0,
       newTaskName: '',
+      infoChip: true,
     }
   },
 
