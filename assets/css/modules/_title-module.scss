@@ -1,0 +1,25 @@
+/*********************************************
+::Title Module
+********************************************/
+.title-module {
+  width: 100%;
+
+  .inner-wrap {
+    padding: 20px 20px 48px;
+    height: 238px;
+
+    background: url('@/assets/images/title-bg.png') no-repeat 0 0;
+    background-size: cover;
+
+    @media (min-width: $mediumish) {
+      padding: 48px ;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    color: #fff;
+  }
+}
+
+/*******************************************   */

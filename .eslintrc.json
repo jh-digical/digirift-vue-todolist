@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": ["@nuxtjs", "plugin:nuxt/recommended", "plugin:vue/essential", "plugin:prettier/recommended", "eslint:recommended"],
+  "parserOptions": {},
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "semi": false
+      }
+    ]
+  }
+}

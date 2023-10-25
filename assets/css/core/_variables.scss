@@ -1,0 +1,71 @@
+/*********************************************
+:: Variables
+********************************************/
+
+// Breakpoint Sizes
+$tiny: 350px;
+$small: 450px;
+$smallish: 640px;
+$medium: 768px;
+$mediumish: 1024px;
+$large: 1160px;
+$largeish: 1280px;
+$huge: 1440px;
+$bigmac: 1920px;
+
+/******************************************   */
+// Fonts
+
+// Base Fonts
+$font-family-1: 'aktiv-grotesk', sans-serif;
+$font-family-2: 'aktiv-grotesk', sans-serif;
+$font-icon: 'Material Symbols Outlined';
+
+// Fonts Weights
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-extrabold: 900;
+
+/******************************************   */
+// Colors
+
+// Brand Colorss
+$color-1: #394e54; // grey
+$color-2: #FFAC32; // yellow
+$color-3: #90D700; // green
+$color-4: #2142B5; // blue
+
+// Shades of Grey
+$grey-1: #f9f9f9;
+$grey-2: #4a4a4a;
+$grey-3: #615a4e;
+$grey-4: #1C1C1C;
+$grey-5: #232221;
+
+// Links
+@use "sass:color";
+
+$color-link: $color-1;
+$color-link-hover: color.adjust($color-link, $lightness: 12%);
+
+// User Feedback
+$color-message: $grey-2;
+$color-attention: $color-1;
+$color-success: #38b449;
+
+// Social Media
+$color-facebook: #3b5998;
+$color-twitter: #55acee;
+$color-vimeo: #1ab7ea;
+$color-youtube: #cd201f;
+$color-gplus: #dc4e41;
+
+/******************************************   */
+// Page Height Calculator
+$header-height-desktop: 129px;
+$header-height-mobile: 94px;
+$footer-height-desktop: 114px;
+$footer-height-mobile: 82px;

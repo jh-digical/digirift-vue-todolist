@@ -1,0 +1,21 @@
+{
+  "files.autoSave": "afterDelay",
+  "trailing-spaces.trimOnSave": false,
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "vetur.validation.style": false,
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "vue",
+  ],
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true
+  },
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 140
+}

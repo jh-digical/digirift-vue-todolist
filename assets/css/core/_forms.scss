@@ -1,0 +1,243 @@
+/*********************************************
+:: Forms
+********************************************/
+
+form {
+  width: 100%;
+  background: white;
+}
+
+legend {
+  margin-bottom: 15px;
+
+  // @extend h2;
+}
+
+label {
+  display: block;
+  margin-bottom: 9px;
+
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 26px;
+
+  color: #000;
+}
+
+.form-note {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-weight: $font-normal;
+  line-height: 1;
+}
+
+/******************************************   */
+// Disabled Field Styles
+.field-disabled,
+input[disabled],
+textarea[disabled],
+select[disabled],
+input[readonly],
+textarea[readonly],
+select[readonly] {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/******************************************   */
+// Core Field Styles
+input,
+textarea,
+select {
+  display: inline-block;
+  max-width: 238px;
+  width: 100%;
+  height: 36px;
+  padding: 4px 10px;
+
+  font-family: $font-family-1;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 26px;
+
+  color: #000;
+
+  background: ffffff;
+  border: 1px solid #CCC;
+
+  // border-radius: 2px;
+
+  outline: none;
+  appearance: none;
+  transition: all 0.5s ease-in-out;
+
+  &:hover,
+  &:focus {
+    border-color: #1C1C1C;
+    transition: all 0.5s ease-in;
+  }
+}
+
+/******************************************   */
+// Misc Field Styles
+*::placeholder {
+  font-family: $font-family-1;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 17px;
+
+  color: #5D5D5D !important;
+  opacity: 0.5 !important;
+}
+
+textarea,
+select[multiple] {
+  height: 180px;
+}
+
+select::-ms-expand {
+  display: none; /* IE 10-11 */
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  height: auto;
+}
+
+/******************************************   */
+// Form Field Container
+.form-field {
+  position: relative;
+
+  width: 100%;
+  padding: 0 0 20px;
+}
+
+/******************************************   */
+// Form Fields Stack
+.form-fields-stack {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: calc(100% + 20px);
+  margin: 0 -10px;
+
+  @media (min-width: $medium) {
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  .form-field {
+    margin-left: 13.5px;
+    margin-right: 13.5px;
+  }
+}
+
+/******************************************   */
+// Custom Checkbox/Radio Styles (no JS)
+.form-field.radio,
+.form-field.checkbox {
+  padding: 10px 0;
+
+  label {
+    position: static;
+    opacity: 1;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #4a4a4a;
+  }
+
+  .custom-checkbox-radio {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 0 25px 10px 0;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #4a4a4a;
+    cursor: pointer;
+
+    input {
+      display: inline-block;
+      vertical-align: top;
+      width: 15px;
+      height: 15px;
+      margin: 2px 10px 0 0;
+      padding: 0;
+
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      appearance: radio;
+    }
+
+    span {
+      display: initial;
+      width: calc(100% - 33px);
+
+      color: #4a4a4a;
+    }
+  }
+
+  .form-field.checkbox {
+    input {
+      appearance: checkbox;
+    }
+  }
+}
+
+/******************************************   */
+// Form field select
+.form-field.select {
+  &::after {
+    content: '\e926';
+    position: absolute;
+    top: 15px;
+    right: 5px;
+
+    font-family: $font-icon;
+    font-size: 14px;
+    color: $color-1;
+
+    pointer-events: none;
+  }
+}
+
+/******************************************   */
+/* stylelint-disable selector-class-pattern */
+
+// Form Feedback
+.form-field.error input,
+.form-field.error textarea,
+.form-field.error select,
+.form-field.error .SumoSelect > .CaptionCont {
+  border-color: $color-attention;
+}
+
+.form-field.valid input,
+.form-field.valid textarea,
+.form-field.valid select,
+.form-field.valid .SumoSelect > .CaptionCont {
+  color: black;
+  border-color: #ccc;
+}
+
+label.error,
+label.error-SumoSelect-label,
+.php-error li {
+  margin: 10px 0 0;
+  font-weight: $font-bold;
+  color: $color-attention !important;
+}
+
+/* stylelint-enable selector-class-pattern */

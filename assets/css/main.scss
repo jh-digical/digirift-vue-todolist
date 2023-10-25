@@ -1,0 +1,35 @@
+/*********************************************
+:: Core
+   Base Elements
+   eg. typography, fonts, forms, buttons etc.
+********************************************/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import '@/assets/css/core/variables';
+@import '@/assets/css/core/mixins';
+@import '@/assets/css/core/layout';
+@import '@/assets/css/core/typography';
+@import '@/assets/css/core/buttons';
+@import '@/assets/css/core/forms';
+
+/*********************************************
+:: Modules
+********************************************/
+@import '@/assets/css/modules/header-module';
+@import '@/assets/css/modules/footer-module';
+@import '@/assets/css/modules/title-module';
+@import '@/assets/css/modules/popup-module';
+@import '@/assets/css/modules/pagination-module';
+
+/*********************************************
+:: Pages
+********************************************/
+@import '@/assets/css/pages/home';
+@import '@/assets/css/pages/about';
+@import '@/assets/css/pages/products';
+@import '@/assets/css/pages/contact';
+@import '@/assets/css/pages/finished-work';

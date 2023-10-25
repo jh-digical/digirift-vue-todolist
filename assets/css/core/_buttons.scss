@@ -1,0 +1,125 @@
+/*********************************************
+:: Buttons
+********************************************/
+
+button {
+  outline: none;
+}
+
+/******************************************   */
+// Default Button
+
+.button,
+a.button,
+button.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  min-width: 70px;
+  height: 42px;
+  padding: 0 10px;
+
+  font-family: $font-family-1;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 26px;
+  text-align: center;
+
+  color: $color-3;
+  cursor: pointer;
+
+  background: #fff;
+  border: 1px solid #90D700;
+
+  transition: all 0.2s ease-in-out;
+
+
+  &.full {
+    width: 100%;
+  }
+
+  &.small {
+    height: 41px;
+
+    line-height: 19px;
+  }
+
+  &.medium {
+    height: 60px;
+
+    line-height: 38px;
+  }
+
+  &.large {
+    height: 91px;
+    padding: 22px 30px;
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+
+    border-width: 3px;
+    border-radius: 45px;
+  }
+
+  &.grey {
+    color: white;
+
+    background: #334f54;
+    border-color: #334f54;
+  }
+
+  &.border-grey {
+    color: #5D5D5D;
+    border-color: #5D5D5D;
+
+    &:hover,
+    &:focus {
+      color: #90D700;
+      border-color: #90D700;
+      background: #fff;
+    }
+  }
+
+  &.border-red {
+    color: $color-3;
+
+    border-color: $color-3;
+  }
+
+  &.border-green {
+    color: $color-2;
+
+    border-color: $color-2;
+  }
+
+  &.border-blue {
+    color: $color-4;
+
+    border-color: $color-4;
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background: $color-3;
+  }
+}
+
+/******************************************   */
+// Disabled Button Styles
+
+.button-disabled,
+.button[disabled],
+button[disabled],
+button[type='submit'][disabled],
+input[type='submit'][disabled],
+input[type='button'][disabled],
+input[type='reset'][disabled] {
+  color: white;
+  opacity: 0.5;
+  cursor: default;
+}

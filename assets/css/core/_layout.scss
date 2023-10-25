@@ -1,0 +1,86 @@
+/*********************************************
+:: Layout
+********************************************/
+
+// Remove blue highlight on click
+* {
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+}
+
+body {
+  max-width: 100%;
+}
+
+#app {
+  min-height: 100vh;
+  padding: 0 0 20px;
+  overflow-x: hidden;
+  background: #2142B5;
+
+  @media (min-width: $mediumish) {
+    padding: 0 0 58px;
+  }
+
+  &.nav-open {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+/******************************************   */
+// Main <section class="main" role="main">
+.main {
+  // min-height: calc(100vh - #{$header-height-mobile + $footer-height-mobile});
+
+  min-height: auto;
+
+  @media (min-width: $mediumish) {
+    // min-height: calc(100vh - #{$header-height-desktop + $footer-height-desktop});
+
+    min-height: auto;
+  }
+}
+
+/******************************************   */
+// Content Max Width
+.content-max-width {
+  position: relative;
+  width: 100%;
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/******************************************   */
+// Content Full Width
+.content-full-width {
+  position: relative;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0;
+  clear: both;
+}
+
+/******************************************   */
+// Narrow Content Max Width
+.content-narrow-width {
+  position: relative;
+  width: 100%;
+  max-width: 610px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/******************************************   */
+// Breakpoints
+.mob {
+  @media (min-width: $mediumish) {
+    display: none !important;
+  }
+}
+
+.desktop {
+  @media (max-width: $mediumish) {
+    display: none !important;
+  }
+}
