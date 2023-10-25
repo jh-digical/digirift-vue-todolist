@@ -59,7 +59,6 @@ export const actions = {
 
   // Action to update an item
   updateData({ commit }, updatedItems) {
-    // Commit the mutation to update the state
     commit('updateData', updatedItems)
 
     // Update localStorage
